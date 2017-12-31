@@ -1,4 +1,4 @@
 ## Hello World Project
 
-This is a project to test Jenkins and CI.
+This is a project to try out CI.
 
