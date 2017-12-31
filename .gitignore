@@ -1,2 +1,2 @@
 hello_env/
-
+*__pycache__*
