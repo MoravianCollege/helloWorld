@@ -1,3 +1,5 @@
 hello_env/
 *__pycache__*
 **/*.egg-info/*
+.cache/
+.tox/
