@@ -11,4 +11,4 @@ class TestBeerAPI(unittest.TestCase):
         self.app = beerapi.app.test_client()
 
     def testRoot(self):
-        self.assertEqual({}, json.loads(self.app.get('/').data))
+        self.assertEqual({}, json.loads(self.app.get('/').data.decode()))
