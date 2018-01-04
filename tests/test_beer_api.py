@@ -1,14 +1,15 @@
 
-import unittest
+import pytest
 import json
 import beerapi
 
 
-class TestBeerAPI(unittest.TestCase):
+@pytest.fixture()
+def app():
+    beerapi.app.testing = True
+    app = beerapi.app.test_client()
+    return app
 
-    def setUp(self):
-        beerapi.app.testing = True
-        self.app = beerapi.app.test_client()
 
-    def testRoot(self):
-        self.assertEqual({}, json.loads(self.app.get('/').data.decode()))
+def test_root(app):
+    assert json.loads(app.get('/').data.decode()) == {}
