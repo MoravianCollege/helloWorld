@@ -13,7 +13,7 @@ node
     {
         sh '''
           . beer_env/bin/activate
-          pytest
+          python -m pytest
           '''
     }
 
