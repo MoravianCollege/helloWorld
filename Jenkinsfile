@@ -1,9 +1,5 @@
 node
 {
-    stage('Fetch')
-    {
-        git 'https://github.com/MoravianCollege/helloWorld.git'
-    }
     stage('Environment Setup')
     {
         sh '''
