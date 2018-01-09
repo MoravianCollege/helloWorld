@@ -1,5 +1,9 @@
 node
 {
+    stage('Fetch')
+    {
+        checkout scm
+    }
     stage('Environment Setup')
     {
         sh '''
