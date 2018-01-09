@@ -5,8 +5,8 @@ node
         sh '''
           python3 -m venv beer_env
           . beer_env/bin/activate
-          pip install -r requirements.txt
-          pip install .
+          python -m pip install -r requirements.txt
+          python -m pip install .
           '''
     }
     stage('Unit Testing')
