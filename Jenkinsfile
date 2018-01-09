@@ -6,7 +6,7 @@ node
     }
     stage('Unit Testing')
     {
-        sh 'tox'
+        sh 'pytest'
     }
     stage('Post Results')
     {
