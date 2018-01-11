@@ -6,7 +6,7 @@ node
     }
     stage('Unit Testing')
     {
-        sh 'tox --workdir ~/.env'
+        sh 'tox'
     }
     stage('Static Analysis')
     {
