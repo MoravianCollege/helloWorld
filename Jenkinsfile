@@ -6,7 +6,10 @@ node
     }
     stage('Unit Testing')
     {
-        echo 'URL= ${JENKINS_URL}'
+        sh 'env > env.txt'
+        for (String i : readFile('env.txt').split("\r?\n")) {
+            println i
+        }
         sh 'tox'
     }
     stage('Static Analysis')
