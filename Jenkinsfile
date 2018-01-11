@@ -6,6 +6,7 @@ node
     }
     stage('Unit Testing')
     {
+        echo 'URL= ${JENKINS_URL}'
         sh 'tox'
     }
     stage('Static Analysis')
